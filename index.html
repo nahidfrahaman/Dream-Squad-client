@@ -107,25 +107,26 @@
               <div>
                 <!-- per player cost field  -->
                 <h4 class="d-inline mt-2 p-2">Per Player</h4>
-                <input class="px-1 py-1 border border-0 rounded" type="text" placeholder="Per player cost">
+                <input id="per-player-cost-input" class="px-1 py-1 border border-0 rounded" type="text" placeholder="Per player cost">
                 <!-- calculte btn  -->
                 <button id="caluclte-expence" class="btn btn-primary w-75 mt-4 ms-5">Calulate</button>
                 <!-- expense total  -->
-                <h4 class="mt-3 text-center">Pleayer Expence $ <span>00</span></h4>
+                <h4  class="mt-3 text-center">Pleayer Expence $ <span id="total-expence">00</span></h4>
                 <!-- Manager cost field  -->
                 <div class="mt-5">
                   <h4 class="d-inline mt-5 me-3">Manger</h4>
-                <input class="px-1 py-1 border border-0 rounded" type="text" placeholder="Manager cost">
+                <input id="cost-for-manager-field" class="px-1 py-1 border border-0 rounded" type="text" placeholder="Manager cost">
                 </div>
                 <!-- Coach cost field  -->
                 <div class="mt-3">
                   <h4 class="d-inline me-4">Coach</h4>
-                <input class="px-1 py-1 border border-0 rounded" type="text" placeholder="Coach cost">
+                <input id="cost-for-coach-field" class="px-1 py-1 border border-0 rounded" type="text" placeholder="Coach cost">
                 <!-- calculte total btn  -->
-                <button class="btn btn-primary w-75 mt-4 ms-5">Calulate Total</button>
+                <button id="total-cal-btn" class="btn btn-primary w-75 mt-4 ms-5">Calulate Total</button>
                 </div>
+                <!-- display total cost  -->
                 <div class="d-flex justify-content-between w-75 mx-auto mt-5">
-                  <h5>Total</h5> <h5>$ <span>00</span></h5>
+                  <h5>Total</h5> <h5>$ <span id="total-cost">00</span></h5>
                 </div>
               </div>
               </div>
@@ -137,6 +138,11 @@
       </section>
     </main>
     <!-- main section end  -->
+    <!-- footer section end  -->
+    <footer>
+      
+    </footer>
+    <!-- footer section Start  -->
 
     <script src="app.js"></script>
   </body>
