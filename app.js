@@ -19,12 +19,17 @@ function display(playerlist){
 document.getElementById('players').addEventListener('click', function(event){
     
     const playerName=  event.target.parentNode.children[1].innerText;
-    
+    event.target.classList.add('disabled');
 
     if( playerArray.length<5){
         playerArray.push(playerName);
 
     }
+    else{
+        alert('You cannot add More than 5 players')
+    }
+        
+
    display(playerArray);
 })
 
@@ -49,7 +54,15 @@ function getInputValueById (elemntId){
     const inputField= document.getElementById(elemntId);
     const inputFieldString= inputField.value;
     const inputNumber= parseInt(inputFieldString);
-    return inputNumber;
+  
+    if (isNaN(inputNumber)){
+        alert('Please Input a Number')
+        return;
+        
+    }
+    else{
+        return inputNumber;
+    }
 }
 
 
