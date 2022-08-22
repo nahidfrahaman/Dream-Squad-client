@@ -1,1 +1,3 @@
-console.log('app.js file connected')
+document.getElementById('caluclte-expence').addEventListener('click', function(){
+    
+})

@@ -1,0 +1,17 @@
+/* common styles  */
+/* google font is added  */
+
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Poppins&display=swap');
+
+body{
+    
+    font-family: 'Poppins', sans-serif;
+}
+#header-font{
+    font-family: 'Berkshire Swash', cursive;
+    color:#FF5E19;
+    
+}
+.header-section{
+    background-color: #DCDCDC;
+}
