@@ -1,3 +1,49 @@
+let playerArray=[];
+
+function display(playerlist){
+    
+    const orderlist= document.getElementById('player-list')
+    orderlist.innerHTML= ""; 
+    for (let i=0 ; i<playerlist.length; i++){
+        const playerName= playerlist[i];
+        
+        const li= document.createElement('li');
+        li.innerText= playerName;
+
+        orderlist.appendChild(li)
+        
+        
+    }
+}
+
+document.getElementById('players').addEventListener('click', function(event){
+    
+    const playerName=  event.target.parentNode.children[1].innerText;
+    
+
+    if( playerArray.length<5){
+        playerArray.push(playerName);
+
+    }
+   display(playerArray);
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // common function 
 function getInputValueById (elemntId){
     const inputField= document.getElementById(elemntId);
@@ -10,7 +56,7 @@ function getInputValueById (elemntId){
 // add addEventListener to calculate btn 
 document.getElementById('caluclte-expence').addEventListener('click', function(){
   const costPerPlayer= getInputValueById('per-player-cost-input')
-  const totalExpence= costPerPlayer *5;
+  const totalExpence= costPerPlayer *playerArray.length;
   const totalExpenceElement= document.getElementById('total-expence');
   totalExpenceElement.innerText= totalExpence;
   
