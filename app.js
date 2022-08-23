@@ -1,7 +1,7 @@
 let playerArray=[];
 
+// function add player name to list 
 function display(playerlist){
-    
     const orderlist= document.getElementById('player-list')
     orderlist.innerHTML= ""; 
     for (let i=0 ; i<playerlist.length; i++){
@@ -16,11 +16,10 @@ function display(playerlist){
     }
 }
 
-document.getElementById('players').addEventListener('click', function(event){
-    
-    const playerName=  event.target.parentNode.children[1].innerText;
-    event.target.classList.add('disabled');
-
+// add onclick funtion to btn 
+function addtoList(add){
+    const playerName= add.parentNode.children[1].innerText;
+    add.classList.add('disabled');
     if( playerArray.length<5){
         playerArray.push(playerName);
 
@@ -28,25 +27,8 @@ document.getElementById('players').addEventListener('click', function(event){
     else{
         alert('You cannot add More than 5 players')
     }
-        
-
-   display(playerArray);
-})
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    display(playerArray);
+}
 
 
 // common function 
@@ -54,15 +36,17 @@ function getInputValueById (elemntId){
     const inputField= document.getElementById(elemntId);
     const inputFieldString= inputField.value;
     const inputNumber= parseInt(inputFieldString);
-  
-    if (isNaN(inputNumber)){
-        alert('Please Input a Number')
+    
+    // check input validaiton 
+    if (isNaN(inputNumber) || inputNumber<0){
+        alert('Please Input a positive Number')
         return;
         
     }
     else{
         return inputNumber;
     }
+    
 }
 
 
