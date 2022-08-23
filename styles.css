@@ -4,8 +4,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Poppins&display=swap');
 
 body{
-    
+    color: white;
     font-family: 'Poppins', sans-serif;
+    background-color: rgb(23, 21, 49);
 }
 #header-font{
     font-family: 'Berkshire Swash', cursive;
@@ -13,5 +14,10 @@ body{
     
 }
 .header-section{
-    background-color: #DCDCDC;
+    background-image: url(/bacground/background.png);
+}
+.font-icon{
+    color: white;
+    font-size: 24px;
+    margin-left: 4px;
 }
